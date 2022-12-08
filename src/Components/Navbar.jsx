@@ -1,14 +1,17 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { Typography } from "@mui/material";
+import { IconButton, Typography, LightModeIcon, NightLightIcon } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 /* Aqui deberan agregar los liks correspondientes a las rutas definidas */
 /* Deberan implementar ademas la logica para cambiar de Theme con el button */
 
 const Navbar = () => {
+
+  use
+
   return (
     <Box
       sx={{
@@ -29,9 +32,9 @@ const Navbar = () => {
       <Link to="/contact">Contact</Link>
       <Link to="/favs">Favs</Link>
 
-      <Button variant="contained" size="small">
-        Change theme
-      </Button>
+      <IconButton >
+        {/* {state === 'dark' ? <LightModeIcon /> : <NightLightIcon />} */}
+      </IconButton>
     </Box>
   );
 };
