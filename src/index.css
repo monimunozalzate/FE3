@@ -34,7 +34,7 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 footer > img{
-  width: 200px;
+  width: 220px;
   margin: 0;
 }
 footer > p{
@@ -43,26 +43,27 @@ footer > p{
 
 .card{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 250px;
-  padding: 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  height: 400px;
+  padding: 1rem;
+  /* border: 0.5px solid rgb(136, 136, 136); */
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid white;
 }
 
 .card-grid{
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
-  width: 90vw;
+  width: auto;
   height: auto;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 table {

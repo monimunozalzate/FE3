@@ -2,21 +2,22 @@ import { Grid, TextField, Button } from "@mui/material";
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-// import swal from "sweetalert"
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
-
   let initialValues = {
     nombre: "",
     email: "",
-  };
+  }
+
+  const onSubmit = (data) => {
+    console.log(data);
+    alert(`Gracias ${data.nombre} te contactaremos cuando antes vía mail`)
+  }
 
   const { handleChange, handleSubmit, values, errors } = useFormik({
     initialValues,
-    onSubmit: (data) => {
-      console.log(data);
-    },
+    onSubmit,  
 
     validationSchema: Yup.object({
       nombre: Yup.string().required("Ingrese un nombre").min(5),
@@ -61,16 +62,13 @@ const Form = () => {
               name="email"
               onChange={handleChange}
               value={values.email}
-              error={errors.email}     
+              error={errors.email}
               helperText={errors.email}
             />
           </Grid>
-          <Button 
-          type="submit" 
-          variant="contained" 
-          size="large"
-          >
-            Enviar</Button>
+          <Button type="submit" variant="contained" size="large">
+            Enviar
+          </Button>
         </Grid>
       </form>
     </div>
@@ -79,7 +77,7 @@ const Form = () => {
 
 export default Form;
 
-// error={swal({  
-//   text: "Por favor verifique su información nuevamente",  
+// error={swal({
+//   text: "Por favor verifique su información nuevamente",
 //   icon: "error",
 // })}
