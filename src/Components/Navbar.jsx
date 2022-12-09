@@ -29,11 +29,11 @@ const Navbar = () => {
     >
       <img src="/images/DH.png" alt="DH-logo" style={{ height: "2rem" }} />
 
-      <Typography variant="h5">CLINICA ODONTOLOGICA</Typography>
+      <Typography variant="h4">CLINICA ODONTOLOGICA</Typography>
 
-      <Link to="/home">Home</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/favs">Favs</Link>
+      <Link to="/home"><h3>Home</h3></Link>
+      <Link to="/contact"><h3>Contact</h3></Link>
+      <Link to="/favs"><h3>Favs</h3></Link>
 
       <IconButton
         onClick={() =>

@@ -47,7 +47,7 @@ footer > p{
   flex-direction: column;
   align-items: center;
   width: 250px;
-  height: 400px;
+  height: 420px;
   padding: 1rem;
   /* border: 0.5px solid rgb(136, 136, 136); */
 }
@@ -58,8 +58,8 @@ footer > p{
 
 .card-grid{
   display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
+  justify-content: center;
+  gap: 3rem;
   width: auto;
   height: auto;
   flex-wrap: wrap;
