@@ -1,16 +1,19 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { IconButton, Typography, LightModeIcon, NightLightIcon } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { ContextGlobal } from "./utils/global.context";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 /* Aqui deberan agregar los liks correspondientes a las rutas definidas */
 /* Deberan implementar ademas la logica para cambiar de Theme con el button */
 
 const Navbar = () => {
-
-  use
+  
+  const { state, dispatch } = useContext(ContextGlobal);
 
   return (
     <Box
@@ -32,8 +35,16 @@ const Navbar = () => {
       <Link to="/contact">Contact</Link>
       <Link to="/favs">Favs</Link>
 
-      <IconButton >
-        {/* {state === 'dark' ? <LightModeIcon /> : <NightLightIcon />} */}
+      <IconButton
+        onClick={() =>
+          dispatch(state === "" ? { type: "dark" } : { type: "light" })
+        }
+      >
+        {state === "dark" ? (
+          <LightModeOutlinedIcon />
+        ) : (
+          <DarkModeOutlinedIcon />
+        )}
       </IconButton>
     </Box>
   );

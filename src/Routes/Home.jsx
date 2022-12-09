@@ -7,13 +7,16 @@ import axios from "axios";
 
 const Home = () => {
   const [odontologos, setOdontologos] = useState([]);
+  const [dispatchLike, setDispatchLike] = useState(false)
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => setOdontologos(res.data))
       .catch((err) => console.log(err));
-  }, []);
+
+      setDispatchLike(false)
+  }, [dispatchLike]);
 
   return (
     <main className="">

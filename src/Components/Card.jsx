@@ -5,11 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-// import { useState } from 'react'
 
 
 const CardOdontologo = ({ name, username, id }) => {
-  // const [favorites, setFavorites] = useState([]);
 
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
@@ -25,7 +23,7 @@ const CardOdontologo = ({ name, username, id }) => {
     if(localStorage.getItem('favorites') == null){
       localStorage.setItem('favorites', '[]');
     }
-
+   
     let data =  JSON.parse(localStorage.getItem('favorites'))
     data.push(odontologoData)
 
