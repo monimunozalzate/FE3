@@ -48,5 +48,10 @@
   },
   "devDependencies": {
     "msw": "^0.47.3"
+  },
+  "jest":{
+    "modulaNameMapper":{
+      "axios":"axios/dist/node/axios.cjs"
+    }
   }
 }
