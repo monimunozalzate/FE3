@@ -14,7 +14,7 @@ const reducerFunction = (state, { type }) => {
     case "light":
       return {
         bgFlag: "dark",
-        bgColor: "rgba(0, 0, 0, 0.6)"
+        bgColor: "rgba(0, 0, 0, 0.38)"
       }
     default:
       return state;
