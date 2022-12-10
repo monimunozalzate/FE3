@@ -11,7 +11,7 @@ const Footer = () => {
         width: "100%",
         backgroundColor: "#e3f2fd",
         padding: "0.5rem",
-        marginTop: "2rem",
+        
       }}
       component="footer"
     >

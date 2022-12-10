@@ -1,6 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import { IconButton, Typography } from "@mui/material";
+import { Typography, Box, IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ContextGlobal } from "./utils/global.context";
@@ -35,19 +34,20 @@ const Navbar = () => {
       <Link to="/contact"><h3>Contact</h3></Link>
       <Link to="/favs"><h3>Favs</h3></Link>
 
+      {/* <button onClick={() => dispatch({ type: state.bgFlag })}>Dark mode</button> */}
       <IconButton
         onClick={() =>
-          dispatch(state === "" ? { type: "dark" } : { type: "light" })
+          dispatch(state.bgFlag === "" ? { type: "dark" } : { type: "light" })
         }
       >
-        {state === "dark" ? (
-          <LightModeOutlinedIcon />
+        {state.bgFlag === "dark" ? (
+          <LightModeOutlinedIcon />          
         ) : (
           <DarkModeOutlinedIcon />
         )}
       </IconButton>
     </Box>
   );
-};
+}
 
 export default Navbar;

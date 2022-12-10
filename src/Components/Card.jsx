@@ -20,7 +20,7 @@ const CardOdontologo = ({ name, username, id }) => {
       username: username,
     };
 
-    if(localStorage.getItem('favorites') == null){
+    if(localStorage.getItem('favorites') == null ){
       localStorage.setItem('favorites', '[]');
     }
    

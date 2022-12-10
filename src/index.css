@@ -21,6 +21,7 @@ code {
 
 h1{
   text-align: center;
+  margin-top: 0;
 }
 
 
@@ -48,7 +49,7 @@ footer > p{
   align-items: center;
   width: 250px;
   height: 420px;
-  padding: 1rem;
+  padding: 0 3rem ;
   /* border: 0.5px solid rgb(136, 136, 136); */
 }
 
@@ -59,7 +60,7 @@ footer > p{
 .card-grid{
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
   width: auto;
   height: auto;
   flex-wrap: wrap;
@@ -83,12 +84,4 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
-
-.dark{
-  background-color: #12121296;
-  color: white;
-}
-.dark > a {
-  color: white;
 }
